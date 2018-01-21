@@ -29,7 +29,6 @@
 # COMMAND PARSED VARIABLES #
 ############################
 adapter="all"
-targettemp=""
 fanpercent=""
 arguments="$@"
 ##################
