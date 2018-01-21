@@ -38,8 +38,7 @@ arguments="$@"
 usage ()
 {
     echo "* AMDGPU-PRO-FANS *"
-    echo "error: invalid arguments"
-    echo "usage: $0 [-h] for help..."
+    echo "usage: $0 [-h] [-a adapter] [-s fanpercent]"
     exit
 }
 
@@ -89,15 +88,15 @@ set_fans_requested ()
 #################################
 command_line_parser ()
 {
-     parseline=`getopt -s bash -u -o a:s: -n '$0' -- "$arguments"` 
+     parseline=`getopt -s bash -u -o a:s:h -n '$0' -- "$arguments"`
      eval set -- "$parseline"
      while true ; do
         case "$1" in
-            -a ) adapter="$2" ; shift 2 ;;
-            -s ) fanpercent="$2" ; set_fans_requested ; break ;;
+            -a) adapter="$2" ; shift 2 ;;
+            -s) fanpercent="$2" ; set_fans_requested ; break ;;
             --)  break ;;
-            *) usage ; exit 1 ;;
-        esac    
+            -h) usage ; exit 1 ;;
+        esac
     done
 }
 
