@@ -29,7 +29,8 @@
 # COMMAND PARSED VARIABLES #
 ############################
 adapter="all"
-fanpercent=""
+fanpercent="85"
+#fanpercent="100"
 arguments="$@"
 ##################
 # USAGE FUNCTION #
