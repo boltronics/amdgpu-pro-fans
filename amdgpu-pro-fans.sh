@@ -105,4 +105,3 @@ command_line_parser ()
 #################
 
 command_line_parser
-exit;
