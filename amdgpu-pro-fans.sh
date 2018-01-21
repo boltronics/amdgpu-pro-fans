@@ -64,8 +64,8 @@ set_all_fan_speeds ()
                   speedresults=$(head -1 "$workingdir"/pwm1)
                   if [ $(( speedresults - speed )) -gt 6 ] ; then
                        echo "Error Setting Speed For Card$cardcount!"
-                  else
-                       echo "Card$cardcount Speed Set To $fanpercent %"
+                  #else
+                  #     echo "Card$cardcount Speed Set To $fanpercent %"
                   fi
               else
                   echo "Error: Unable To Determine Maximum Fan Speed For Card$cardcount!"
