@@ -22,7 +22,7 @@
 
 #####################################################################
 #                          *** IMPORTANT ***                        #
-# DO NOT MODIFY PAST THIS POINT IF YOU DONT KNOW WHAT YOUR DOING!!! # 
+# DO NOT MODIFY PAST THIS POINT IF YOU DONT KNOW WHAT YOUR DOING!!! #
 #####################################################################
 
 ############################
@@ -55,7 +55,7 @@ set_all_fan_speeds ()
               cd $CurrentMonitor # &>/dev/null
               workingdir="`pwd`"
               fanmax=$(head -1 "$workingdir"/pwm1_max)
-              if [ $fanmax -gt 0 ] ; then    
+              if [ $fanmax -gt 0 ] ; then
                   speed=$(( fanmax * fanpercent ))
                   speed=$(( speed / 100 ))
                   #chown $USER "$workingdir"/pwm1_enable
