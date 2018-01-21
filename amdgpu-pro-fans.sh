@@ -58,10 +58,10 @@ set_all_fan_speeds ()
               if [ $fanmax -gt 0 ] ; then    
                   speed=$(( fanmax * fanpercent ))
                   speed=$(( speed / 100 ))
-                  sudo chown $USER "$workingdir"/pwm1_enable
-                  sudo chown $USER "$workingdir"/pwm1
-                  sudo echo -n "1" >> $workingdir/pwm1_enable # &>/dev/null
-                  sudo echo -n "$speed" >> $workingdir/pwm1 # &>/dev/null
+                  #chown $USER "$workingdir"/pwm1_enable
+                  #chown $USER "$workingdir"/pwm1
+                  echo -n "1" >> $workingdir/pwm1_enable # &>/dev/null
+                  echo -n "$speed" >> $workingdir/pwm1 # &>/dev/null
                   speedresults=$(head -1 "$workingdir"/pwm1)
                   if [ $(( speedresults - speed )) -gt 6 ] ; then
                        echo "Error Setting Speed For Card$cardcount!"
