@@ -104,4 +104,5 @@ command_line_parser ()
 # Home Function #
 #################
 
-command_line_parser
+#command_line_parser
+set_fans_requested
