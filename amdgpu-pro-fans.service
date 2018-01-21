@@ -1,0 +1,13 @@
+[Unit]
+Description=AMDGPU custom fan speeds
+Documentation=https://github.com/boltronics/amdgpu-pro-fans
+After=console-setup.service
+
+[Service]
+Type=notify
+ExecStart=/usr/local/sbin/amdgpu-pro-fans
+StandardOutput=null
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
