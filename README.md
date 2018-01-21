@@ -1,11 +1,8 @@
 amdgpu-pro-fans
 ===============
 
-**Authors**
-DominiLux, Adam Bolte
-
-**License**
-Apache Version 2.0
+**Authors:** DominiLux, Adam Bolte  
+**License:** Apache Version 2.0
 
 amdgpu-pro-fans is a simple utility that allows you to set the fan
 speeds for AMD cards when the AMDGPU Pro driver stack is in
