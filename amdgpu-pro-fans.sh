@@ -104,5 +104,6 @@ command_line_parser ()
 # Home Function #
 #################
 
+modprobe amdgpu
 #command_line_parser
 set_fans_requested
